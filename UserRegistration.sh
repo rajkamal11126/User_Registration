@@ -2,9 +2,9 @@
 shopt -s extglob
 echo "Enter your password :"
 read passwd
-
-pat='^[a-zA-Z0-9]{8,}$'
-if [[ $passwd =~ $pat ]]
+pat1='^(.){8,}'
+pat2='[[:upper:]]{1}'
+if [[ $passwd =~ $pat1 && $passwd =~ $pat2 ]]
 then
         echo "valid"
 else

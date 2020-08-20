@@ -1,10 +1,10 @@
 #!/bin/bash -x
 shopt -s extglob
-echo "Enter your Mobile number :"
-read number
+echo "Enter your password :"
+read passwd
 
-pat='^[+][9][1][ ][0-9]{10}$'
-if [[ $number =~ $pat ]]
+pat='^[a-zA-Z0-9]{8,}$'
+if [[ $passwd =~ $pat ]]
 then
         echo "valid"
 else

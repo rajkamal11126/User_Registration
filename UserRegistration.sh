@@ -1,6 +1,6 @@
 #!/bin/bash -x
 shopt -s extglob
-echo "Enter your First name :" string
+echo "Enter your Last name :" string
 read string
 
 pat='^[[:upper:]]{1}[[:lower:]]{2,}$'

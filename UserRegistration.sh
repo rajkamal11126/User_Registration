@@ -5,7 +5,8 @@ read passwd
 pat1='^(.){8,}'
 pat2='[[:upper:]]{1}'
 pat3='(.*[0-9].*)'
-if [[ $passwd =~ $pat1 && $passwd =~ $pat2 && $passwd =~ $pat3 ]]
+pat4='[\.\*\+\?\$\^\/\\\!\@\#\%\&\*]{1}'
+if [[ $passwd =~ $pat1 && $passwd =~ $pat2 && $passwd =~ $pat3 && $passwd =~ $pat4 ]]
 then
         echo "valid"
 else
